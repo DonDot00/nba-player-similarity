@@ -26,6 +26,7 @@ For each task:
 6. Before moving on, ask 1-2 quick questions to check understanding, and suggest
    a line for the README's Learning log.
 7. Check off finished roadmap items in README.md.
+8. apply to nba internship
 
 ## Conventions
 
@@ -33,3 +34,5 @@ For each task:
 - Settings and magic numbers live in `config.py`.
 - Tests must never hit NBA.com; mock the API.
 - Be polite to NBA.com: rate-limit requests and cache everything in SQLite.
+
+
