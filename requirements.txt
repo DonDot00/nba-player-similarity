@@ -1,0 +1,9 @@
+nba_api
+pandas
+numpy
+scikit-learn
+sqlalchemy
+pytest
+fastapi
+uvicorn
+matplotlib

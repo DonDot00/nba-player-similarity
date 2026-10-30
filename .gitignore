@@ -1,0 +1,19 @@
+# Virtual environment
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Tests
+.pytest_cache/
+
+# Data (SQLite database is rebuilt from the API)
+data/*.db
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Secrets
+.env
