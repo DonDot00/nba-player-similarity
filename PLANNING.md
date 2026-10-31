@@ -202,6 +202,6 @@ This is a learning project. Each of us is writing the core code ourselves to lea
 
 ### Not a collaborator
 
-- Claude Code is a tutoring tool, not a team member.
+- Claude Code is a tutoring tool, not a team member. We use it only as a coding helper, the same way any developer uses an editor, linter, or search engine. The `.claude/` folder is committed so the tool behaves the same for all three of us.
 - Never add `Co-Authored-By`, "Generated with Claude Code", or any Claude/Anthropic attribution to commits, PRs, or files.
 - Never list Claude as a contributor or author anywhere in the repo.
