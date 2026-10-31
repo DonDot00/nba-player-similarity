@@ -39,7 +39,8 @@ My goal is to be able to explain how and why each of these works, not just to ha
   - **Per 100 possessions** for the impact features (fair across minutes played and pace)
   - **Totals** for building the ratios
 - **Seasons covered:** 1996–97 to the present (the range NBA.com's detailed stats generally cover).
-- **Storage:** every pull is cached in a local SQLite database (via SQLAlchemy). All analysis runs from the database, never live from the API.
+- **Raw data:** downloaded once and committed to `data/raw/` as Parquet or CSV, so everyone starts from the same files.
+- **Storage:** the SQLite database (via SQLAlchemy) is built locally from the raw files and is never committed. All analysis runs from the database, never live from the API.
 - **Being a good API citizen:** NBA.com rate-limits heavy traffic, so requests are spaced out (about 2 or more seconds apart) and nothing is re-downloaded once it's cached.
 
 ### Who qualifies
@@ -136,9 +137,19 @@ nba-player-similarity/
 
 ---
 
+## Team
+
+Three people, three roles. See [PLANNING.md](PLANNING.md) for the full plan.
+
+- **A: Data** (decorators, generators, database)
+- **B: Features** (Pandas/NumPy, testing)
+- **C: Similarity + API** (NumPy, async)
+
+---
+
 ## Roadmap
 
-Each phase is built around one or two concepts so I learn them one at a time.
+The project runs on a **one-week schedule**, with day-by-day details in [PLANNING.md](PLANNING.md). Each phase is built around one or two concepts so we learn them one at a time.
 
 - [ ] **Phase 1: Data collection** *(decorators, generators)*
   - Fetch one season with `nba_api`, then write `@rate_limited` and `@cache_to_sqlite`

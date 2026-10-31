@@ -9,7 +9,7 @@ __pycache__/
 # Tests
 .pytest_cache/
 
-# Data (SQLite database is rebuilt from the API)
+# Data (SQLite database is built locally; data/raw/ is committed)
 data/*.db
 
 # Notebooks
